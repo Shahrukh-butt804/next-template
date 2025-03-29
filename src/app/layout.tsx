@@ -2,6 +2,8 @@ import StoreProvider from "@/lib/redux/store/provider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import WowJsProvider from "@/utils/WowJsProvider";
+import "animate.css"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <StoreProvider>
-        {children}
+          <WowJsProvider>{children}</WowJsProvider>
         </StoreProvider>
       </body>
     </html>

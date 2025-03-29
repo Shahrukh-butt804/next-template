@@ -23,7 +23,9 @@ export default function Home() {
     <>
 
     <div>
-    <h1>Posts</h1>
+    <h1 className="Wow animate__animated  animate__lightSpeedInRight m-24 text-5xl">
+    Posts
+  </h1>
     <ul>
       {posts?.slice(0, 5).map((post: any) => (
         <li key={post.id}>{post.title}</li>
